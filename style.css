@@ -64,3 +64,9 @@ body {
     font-weight: bold;
     color: red;
 }
+body {
+    background-image: url('images/close-up-attractive-man-suit-holding-bouquet-roses-engagement-ring-making-proposal-standing-against-white-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

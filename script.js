@@ -18,7 +18,7 @@ setInterval(function() {
 }, 500);
 
 var i = 0;
-var txt = "Hi SweetHeart.....! << Now I want to say something special to you. <<< So, Please read everything carefully...! > When I saw you for the first time < You seemed special to me. << As the days went by, you got closer to me....! << I don't know why, but your thoughts always resonate in my mind...! > Everything about you is always interesting to me...! << I am somewhat nervous because I haven't said these words to anyone, and I won’t say them to anyone in the future...! > I Love my beautiful wife Ayesha Kiran more than anything else in this world....! << Now you are the only person I love equally with my parents....! >I Love You < SweetHeart.....! | <<<< I love you so so so much...!";
+var txt = "I love you so much...! <br> Can you marry me? 💍❤️";
 var speed = 50;
 
 function typeWriter() {
