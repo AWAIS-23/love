@@ -1,10 +1,9 @@
 $(document).ready(function(){
     $('.title').click(function(){
-      $('.container').addClass('open');
+        $('.container').addClass('open');
     });
-    
-    
+
     $('.close').click(function(){
-      $('.container').removeClass('open');
+        $('.container').removeClass('open');
     });
-  });
+});

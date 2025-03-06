@@ -1,168 +1,201 @@
-@import url(https://fonts.googleapis.com/css?family=Pacifico);
-body{
-  background: url(https://subtlepatterns.com/patterns/noise_lines.png);
-  font-family: 'Pacifico', cursive;
-  overflow: hidden;
-  color: #fff;
-}
-.bgoverlay{
-  background: rgb(103,58,183);
-  background: rgba(103,58,183,0.7);
-  position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-}
-.container{
-  position: relative;
-  margin: 120px auto 0 auto;
-  width: 320px;
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+body {
+    background: url(https://subtlepatterns.com/patterns/noise_lines.png);
+    font-family: 'Pacifico', cursive;
+    overflow: hidden;
+    color: #fff;
 }
 
-
-.ico{
-  display: block;
-  width: 320px;
-  height: 320px;
-}
-.open .ico{
-  animation: open 4s;
-  transform: scale(10);
-}
-.ico .title{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -95px;
-  margin-top: -73px;
-  z-index: 4;
-  font-size: 50px;
-  font-family: 'Pacifico', cursive;
-  color: #fff;
-  cursor: pointer;
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-}
-.open .ico .title{
-  opacity: 0;
-  transition: all 0.3s ease;
-  top:-100px;
-}
-.ico:before,
-.ico:after,
-.ico2:before,
-.ico2:after{
-  position: absolute;
-  top:0;
-  left:0;
-}
-.ico:before,
-.ico:after,
-.ico2:before,
-.ico2:after{
-  display: block;
-  font-size: 20em;
-  color: #ff4081;
-  content: "\f004";
-  font-family: FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.ico2:before,
-.ico2:after{
-  color: #e91e63;
-}
-.ico:before{
-  z-index: 3;
-}
-.ico:after{
-  animation: explode 4s infinite;
+.bgoverlay {
+    background: rgba(103, 58, 183, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
-
-.ico2:before{
-  animation: explodeSmall 3s infinite;
-}
-.ico2:after{
-  animation: explodeSmall 2s infinite;
-}
-
-
-.endtext{
-  opacity:0;
-  position: absolute;
-  top:-100px;
-  width:100%;
-}
-.open .endtext{
-  top:0;
-  opacity: 1;
-  animation: show 5s;
-}
-.endtext .close{
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-}
-.endtext h1,
-.endtext h2,
-.endtext h3{
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-  text-align: center;
-  font-weight: normal;
-}
-.endtext h1{
-  font-size: 50px;
-}
-.endtext h2{
-  font-size: 30px;
-}
-.endtext h3{
-  font-size: 20px;
+.container {
+    position: relative;
+    margin: 120px auto 0 auto;
+    width: 320px;
+    text-align: center;
 }
 
+.ico {
+    display: block;
+    width: 320px;
+    height: 320px;
+    position: relative;
+    cursor: pointer;
+}
 
+.open .ico {
+    animation: open 4s;
+    transform: scale(10);
+}
+
+/* Heart background for "Click Me" */
+.ico .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    z-index: 4;
+    width: 100px;
+    height: 90px;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.ico .title:before,
+.ico .title:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.ico .title:before {
+    left: -50px;
+}
+
+.ico .title:after {
+    right: -50px;
+}
+
+.open .ico .title {
+    opacity: 0;
+    top: -100px;
+}
+
+.ico:before, .ico:after, .ico2:before, .ico2:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    font-size: 20em;
+    color: #ff4081;
+    content: "\f004";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.ico2:before, .ico2:after {
+    color: #e91e63;
+}
+
+.ico:after {
+    animation: explode 4s infinite;
+}
+
+.ico2:before {
+    animation: explodeSmall 3s infinite;
+}
+
+.ico2:after {
+    animation: explodeSmall 2s infinite;
+}
+
+.endtext {
+    opacity: 0;
+    position: absolute;
+    top: -100px;
+    width: 100%;
+}
+
+.open .endtext {
+    top: 0;
+    opacity: 1;
+    animation: show 5s;
+}
+
+.endtext .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    font-size: 24px;
+    padding: 10px;
+}
+
+.endtext h1, .endtext h2, .endtext h3 {
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    text-align: center;
+    font-weight: normal;
+}
+
+.endtext h1 {
+    font-size: 50px;
+}
+
+.endtext h2 {
+    font-size: 30px;
+}
+
+.endtext h3 {
+    font-size: 20px;
+}
+
+/* Animations */
 @keyframes explode {
     from {
-      transform: scale(1);
-      opacity: 1;
+        transform: scale(1);
+        opacity: 1;
     }
     to {
-      transform: scale(1.6);
-      opacity: 0;
-    }
-}
-@keyframes explodeSmall {
-    from {
-      transform: scale(1);
-      opacity: 1;
-    }
-    to {
-      transform: scale(1.2);
-      opacity: 0;
+        transform: scale(1.6);
+        opacity: 0;
     }
 }
 
+@keyframes explodeSmall {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
 
 @keyframes open {
     from {
-      transform: scale(1);
+        transform: scale(1);
     }
     to {
-      transform: scale(10);
+        transform: scale(10);
     }
 }
 
 @keyframes show {
     from {
-      opacity: 0;
-      top: -100px;
+        opacity: 0;
+        top: -100px;
     }
     to {
-      opacity: 1;
-      top:0;
+        opacity: 1;
+        top: 0;
     }
+}
+#valentineImage {
+    display: none; /* Hide initially */
+    width: 300px;  /* Adjust size */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
 }
