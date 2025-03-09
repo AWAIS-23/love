@@ -55,8 +55,11 @@ img {
   background-position: left top;
 }
 .paper:nth-of-type(3n) {
-/*   filter: hue-rotate(200deg); */
+   filter: hue-rotate(200deg); 
 }
+
+
+
 p {
   font-family: 'Zeyada';
   font-size: 50px;
